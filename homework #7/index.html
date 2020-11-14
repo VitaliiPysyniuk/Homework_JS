@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework #7</title>
+    <style>
+    #menu{
+        background-color: silver;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu p {
+        text-align: center;
+    }
+
+    #menu a {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .div {
+        margin: 3px;
+        padding: 3px;
+        border: 2px solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .slider_class {
+        margin: 20px;
+        position: relative;
+    }
+
+    #photo {
+        width: 100%;
+        height: 500px;
+    }
+
+    #left_button, #right_button {
+        position: absolute;
+        height: 80px;
+        width: 80px;
+    }
+
+    #left_button {
+        left: 10px;
+        top: calc(50% - 40px)
+    }
+
+    #right_button {
+        right: 10px;
+        top: calc(50% - 40px)
+    }
+
+    #text_div {
+        width: 500px;
+        height: 300px;
+        border: 2px solid black;
+        padding: 5px;
+        margin: 0 auto;
+    }
+
+    .filter_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        margin: 0 auto;
+        border: 2px solid green;
+        border-radius: 15px;
+    }
+
+    .check_div {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        width: 120px;
+        padding: 5px;
+        margin: 10px auto;
+        border: 2px solid green;
+        border-radius: 15px;
+    }
+
+    #table_div {
+        width: 300px;
+        margin:  0 auto;
+    }
+
+    </style>
+</head>
+<body>
+<!--// - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".-->
+<!--<div id="text">Зникни</div>-->
+<!--<button id='button1' name="button1">Сховати елемент</button>-->
+
+<!--// - Создайте кнопку, при клике на которую, она будет скрывать сама себя.-->
+<!--<button id="button2" name="button2">Ховаюсь</button>-->
+
+<!--// - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача-->
+<!--<form action="" id='form1' name='form1'>-->
+<!--    <input id="input1" name="sometext">-->
+<!--    <button id="button3" name="button">Check age</button>-->
+<!--</form>-->
+
+<!--// - Создайте меню, которое раскрывается/сворачивается при клике-->
+<!--<nav id="menu" name="navmenu">-->
+<!--    <p>MENU</p>-->
+<!--    <a href="#" name="link">Main</a>-->
+<!--    <a href="#" name="link">Catalog</a>-->
+<!--    <a href="#" name="link">Gallery</a>-->
+<!--    <a href="#" name="link">About us</a>-->
+<!--</nav>-->
+
+
+<!--// - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.-->
+<!--// Вывести список комментариев в документ, каждый в своем блоке.-->
+<!--//  Добавьте каждому комментарию по кнопке для сворачивания его body.-->
+
+<!--// - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.-->
+<!--// Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)-->
+<!--// Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.-->
+<!--<form id="form1" name="form1_name">-->
+<!--    <input id="input1" name="input_form1">-->
+<!--    <input id="input2" name="input_form1">-->
+<!--</form>-->
+<!--<form id="form2" name="form2_name">-->
+<!--    <input id="input3" name="input_form2">-->
+<!--    <input id="input4" name="input_form2">-->
+<!--</form>-->
+
+<!--<button id="button1" name="but_form_text">Log text</button>-->
+
+
+<!--// - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.-->
+<!--// При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.-->
+<!--// (Додатковачастина для завдання)-->
+<!--<form id="form_1" name="formWithInputs">-->
+<!--    <input id="input_1" name="rowsNumber">-->
+<!--    <input id="input_2" name="cellsNumber">-->
+<!--    <input id="input_3" name="innerText">-->
+<!--    <button id="build_button" name="some_button">Build</button>-->
+<!--</form>-->
+
+<!--// - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.-->
+<!--<div class='slider_class' id="slider">-->
+<!--    <img id='photo'  name="slider_photo" src="images\\Acura_TLX_CV10.jpg">-->
+<!--    <img id='left_button' src="images\left.png">-->
+<!--    <img id='right_button' src="images\right.png">-->
+<!--</div>-->
+
+<!--// - Сворити масив не цензцрних слів.-->
+<!--// Сворити інпут текстового типу.-->
+<!--// Якщо людина вводить слово і воно міститься в масиві не цензурних слів-->
+<!--// кинути алерт з попередженням.-->
+<!--// Перевірку робити при натисканні на кнопку-->
+<!--        // Для двох завданнь коди нижче-->
+<!--// - Сворити масив не цензцрних слів.-->
+<!--// Сворити інпут текстового типу.-->
+<!--// Потрібно перевіряти чи не містить ціле речення в собі погані слова.-->
+<!--// Кинути алерт з попередженням у випадку якщо містить.-->
+<!--// Перевірку робити при натисканні на кнопку-->
+<!--<form id="form_2" name="form_2_name">-->
+<!--    <input id="input_1" name="word_input">-->
+<!--    <button id="button_1" name="check_button">Check</button>-->
+<!--</form>-->
+
+
+<!--// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан-->
+<!--<div id="text_div">Lorem ipsum ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequatur hic incidunt quibusdam similique tenetur unde voluptatibus.</div>-->
+
+
+
+<!--// Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.-->
+<!--// 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)-->
+<!--// 2й - оставляет старше 29 лет включительно-->
+<!--// 3й - оставляет тех у кого город киев-->
+<!--// Данные выводить в документ-->
+<!--<div class="filter_div">-->
+<!--     <div class="check_div">-->
+<!--        <input id="status_check" type="checkbox">-->
+<!--        <span>Status: false</span>-->
+<!--    </div>-->
+<!--    <div class="check_div">-->
+<!--        <input id="age_check" type="checkbox">-->
+<!--        <span>Age: than 29</span>-->
+<!--    </div>-->
+<!--    <div class="check_div">-->
+<!--        <input id="city_check" type="checkbox">-->
+<!--        <span>City: Kyiv</span>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="table_div"></div>-->
+
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
