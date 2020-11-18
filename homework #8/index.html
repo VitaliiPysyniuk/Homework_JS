@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework #8</title>
+    <style>
+        div {
+            width: fit-content;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #textarea_3, #textarea_1{
+            width: 200px;
+            height: 150px;
+        }
+
+        #main_form, #form_4 {
+            width: 1300px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            border: 2px solid firebrick;
+        }
+
+        input, select, option, textarea{
+            margin: 2px;
+            width: 100px;
+            height: 30px;
+        }
+
+        button {
+            margin: 5px auto;
+            width: 200px;
+        }
+
+        #table_div {
+            width: 1300px;
+            border: 2px solid firebrick;
+        }
+
+        #form_div {
+            display: none;
+            margin-top: 15px;
+        }
+
+        table button {
+            height: 25px;
+            width: 100%;
+        }
+        td {
+            width: 135px;
+        }
+
+        tr {
+            background-color: silver;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<!--// - Дана textarea.-->
+<!--// В неё вводится текст.-->
+<!--// Сделайте так, чтобы после захода на эту страницу через некоторое время, введенный текст остался в textarea.-->
+<!--<div>-->
+<!--   <textarea id="textarea_1"></textarea>-->
+<!--</div>-->
+
+
+<!--// - Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.-->
+<!--// Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).-->
+<!--<div>-->
+<!--    <form id="main_form">-->
+<!--        <p>Name</p>-->
+<!--        <input id="input_1" name="name_input">-->
+<!--        <p>Surname</p>-->
+<!--        <input id="input_2" name="surname_input">-->
+<!--        <p>Description</p>-->
+<!--        <textarea id="text_area2" name="description"></textarea>-->
+<!--        <p>Position</p>-->
+<!--        <p>Student</p>-->
+<!--        <input type="radio" id="radio_1" name="stud_radio" value="student">-->
+<!--        <p>Teacher</p>-->
+<!--        <input type="radio" id="radio_2" name="teach_radio" value="teacher">-->
+<!--        <p>Group</p>-->
+<!--        <select id="select_1" name="group_select">-->
+<!--            <option value="KN-305">KN-305</option>-->
+<!--            <option value="KN-306">KN-306</option>-->
+<!--            <option value="KN-307">KN-307</option>-->
+<!--        </select>-->
+<!--    </form>-->
+<!--</div>-->
+
+
+<!--// -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....-->
+<!--// Требование : хранить историю своих изменений (даже после перезагрузки страницы).-->
+<!--// Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).-->
+<!--<div>-->
+<!--    <textarea id="textarea_3"></textarea>-->
+<!--    <button id="button_1" name="save">Save changes</button>-->
+<!--    <button id="button_2" name="next">Next changes</button>-->
+<!--    <button id="button_3" name="back">Prev changes</button>-->
+<!--</div>-->
+
+
+<!--// - Реализуйте записную книгу, хранящую данные в локальном хранилище.-->
+<!--// Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения-->
+<!--// Данные вводить через соответсвующую форму.-->
+<div id="table_div">
+    <button id="button_add">Add new phone</button>
+    <table id="main_table"></table>
+</div>
+<div id="form_div">
+ <form id="form_4" name="phoneBook">
+    <p>Name and surname</p>
+    <input type="text" id="input_4_1" name="nameAndSur">
+    <p>Number</p>
+    <input type="text" id="input_4_2" name="number">
+    <p>Email</p>
+    <input type="text" id="input_4_3" name="email">
+    <p>Company</p>
+    <input type="text" id="input_4_4" name="company">
+    <p>Department</p>
+    <input type="text" id="input_4_5" name="department">
+    <p>Birth date</p>
+    <input type="text" id="input_4_6" name="birthDate">
+    <button id="button_save">Save</button>
+</form>
+</div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
